@@ -1,0 +1,34 @@
+{
+  "name": "wearerequired/google-tag-manager",
+  "description": "WordPress plugin to install Google Tag Manager to your site.",
+  "license": "GPL-2.0-or-later",
+  "type": "wordpress-plugin",
+  "keywords": [
+    "wordpress",
+    "google-tag-manager",
+    "gtm"
+  ],
+  "authors": [
+    {
+      "name": "required",
+      "email": "team@required.com",
+      "homepage": "https://required.com",
+      "role": "Company"
+    },
+    {
+      "name": "Dominik Schilling",
+      "email": "dominik@required.com",
+      "role": "Developer"
+    }
+  ],
+  "homepage": "https://github.com/wearerequired/google-tag-manager",
+  "require": {
+    "php": ">=7.4",
+    "wearerequired/traduttore-registry": "^1.0 || ^2.0"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.x-dev"
+    }
+  }
+}
