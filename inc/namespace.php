@@ -7,12 +7,17 @@ declare( strict_types=1 );
 
 namespace Required\GoogleTagManager;
 
+use function Required\Traduttore_Registry\add_project;
+
 const CONTAINER_ID_OPTION = 'required_gtm_container_id';
 
 /**
  * Bootstraps the plugin.
  */
 function bootstrap(): void {
+	// Translations.
+	add_action( 'init', __NAMESPACE__ . '\register_traduttore_project' );
+
 	// Settings and options.
 	add_action( 'init', __NAMESPACE__ . '\register_settings' );
 	add_action( 'admin_init', __NAMESPACE__ . '\register_settings_ui' );
@@ -22,6 +27,17 @@ function bootstrap(): void {
 	add_filter( 'wp_resource_hints', __NAMESPACE__ . '\add_dns_prefetch', 10, 2 );
 	add_action( 'wp_head', __NAMESPACE__ . '\print_script_head' );
 	add_action( 'wp_body_open', __NAMESPACE__ . '\print_script_body', 1 );
+}
+
+/**
+ * Registers project for translations via Traduttore.
+ */
+function register_traduttore_project(): void {
+	add_project(
+		'plugin',
+		'required-google-tag-manager',
+		'https://translate.required.com/api/translations/required/google-tag-manager/'
+	);
 }
 
 /**
