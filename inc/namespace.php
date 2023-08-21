@@ -21,7 +21,7 @@ function bootstrap(): void {
 	// Settings and options.
 	add_action( 'init', __NAMESPACE__ . '\register_settings' );
 	add_action( 'admin_init', __NAMESPACE__ . '\register_settings_ui' );
-	add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), __NAMESPACE__ . '\add_settings_action_link', 10, 2 );
+	add_filter( 'plugin_action_links_' . plugin_basename( PLUGIN_FILE ), __NAMESPACE__ . '\add_settings_action_link', 10, 2 );
 
 	// Frontend.
 	add_filter( 'wp_resource_hints', __NAMESPACE__ . '\add_dns_prefetch', 10, 2 );
