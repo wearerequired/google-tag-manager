@@ -3,7 +3,7 @@
  * Plugin Name: Google Tag Manager
  * Plugin URI: https://github.com/wearerequired/google-tag-manager
  * Description: Integrates Google Tag Manager into WordPress.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Requires at least: 6.1
  * Requires PHP: 7.4
  * Author: required
